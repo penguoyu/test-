@@ -1,0 +1,24 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+int GCD(int a, int b)
+{
+
+	if (a%b == 0) {
+		return b;
+
+	}
+	else {
+		return GCD(b, a%b);
+	}
+}
+
+int main() {
+	cout << "請輸入2數字" << endl;
+	int a, b;
+	cin >> a >> b;
+	int result = GCD(a, b);
+	cout << GCD(a,b) << "\n";
+	return 0;
+}
