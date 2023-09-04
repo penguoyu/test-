@@ -1,0 +1,20 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+int Fa(int n) {
+	if (n == 0)
+		return 1;
+	else
+		return n * Fa(n - 1);
+
+}
+int main() {
+	int n, Total;
+	cout << "請輸入數字n:" << endl;
+	cin >> n;
+	Total = Fa(n);
+	printf("n!=%d", Total);
+	return 0;
+
+}
